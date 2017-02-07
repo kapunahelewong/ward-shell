@@ -1,0 +1,64 @@
+<md-sidenav-container class="sidenav-container" (window:resize)="onResize($event.target.innerWidth)">
+  <md-sidenav #sidenav class="sidenav" mode="{{onSideBarOpen()}}" opened="{{isSideNavOpen}}">
+    <ul class="vertical-menu">
+      <li class="menu-heading" (click)="toggleSection1()">Section 1
+        <md-icon *ngIf="!section1">keyboard_arrow_right</md-icon>
+        <md-icon *ngIf="section1">keyboard_arrow_down</md-icon>
+      </li>
+        <ul class="vertical-menu" *ngIf="section1">
+          <li><a href="page1b.html"class="sub-level-1">page</a></li>
+          <li><a href="page1c.html"class="sub-level-1">page</a></li>
+          <li><a href="page1d.html"class="sub-level-1">page</a></li>
+          <li class="menu-heading sub-heading-2" (click)="toggleSection1b()">level 2 header
+              <md-icon *ngIf="!section1b">keyboard_arrow_right</md-icon>
+              <md-icon *ngIf="section1b">keyboard_arrow_down</md-icon>
+          </li>
+            <ul class="vertical-menu" *ngIf="section1b">
+              <li><a href="page1a.html" class="sub-level-2">page</a></li>
+              <li><a href="page1a.html" class="sub-level-2">page</a></li>
+              <li class="menu-heading sub-heading-3" (click)="toggleSection1c()">level 3 header
+                  <md-icon *ngIf="!section1c">keyboard_arrow_right</md-icon>
+                  <md-icon *ngIf="section1c">keyboard_arrow_down</md-icon>
+              </li>
+                <ul class="vertical-menu" *ngIf="section1c">
+                  <li><a href="page1a.html" class="sub-level-3">page</a></li>
+                  <li><a href="page1a.html" class="sub-level-3">page</a></li>
+                </ul>
+            </ul>
+
+        </ul>
+      <li class="menu-heading" (click)="toggleSection2()">Section 2
+        <md-icon *ngIf="!section2">keyboard_arrow_right</md-icon>
+        <md-icon *ngIf="section2">keyboard_arrow_down</md-icon>
+      </li>
+        <ul class="vertical-menu" *ngIf="section2">
+          <li><a href="page2a.html" class="sub-level-1">page</a></li>
+          <li><a href="page2b.html" class="sub-level-1">page</a></li>
+          <li><a href="page2c.html" class="sub-level-1">page</a></li>
+          <li><a href="page2d.html" class="sub-level-1">page</a></li>
+        </ul>
+      <li class="menu-heading" (click)="toggleSection3()">Section 3
+        <md-icon *ngIf="!section3">keyboard_arrow_right</md-icon>
+        <md-icon *ngIf="section3">keyboard_arrow_down</md-icon>
+      </li>
+        <ul class="vertical-menu" *ngIf="section3">
+          <li><a href="page3a.html" class="sub-level-1">page</a></li>
+          <li><a href="page3b.html" class="sub-level-1">page</a></li>
+          <li><a href="page3c.html" class="sub-level-1">page</a></li>
+          <li><a href="page3d.html" class="sub-level-1">page</a></li>
+        </ul>
+    </ul>
+  </md-sidenav>
+  <div class="sidenav-content">
+    <button *ngIf="isHamburgerVisible" class="hamburger" md-button (click)="sidenav.open()"><md-icon>menu</md-icon></button>
+    <div class="main-content">
+      <p>Put content here.</p>
+    </div>
+  </div>
+</md-sidenav-container>
+
+
+
+
+
+
