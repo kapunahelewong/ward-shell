@@ -64,9 +64,10 @@ header img {
 
 .vertical-menu a {
   display: block;
-  padding: 10px 50px;
+  padding: 10px 0;
   cursor: pointer;
   text-decoration: none;
+  text-align: center;
 }
 .vertical-menu a:hover {
   background-color: #ddd;
@@ -75,6 +76,8 @@ header img {
 .menu-heading {
   background-color: #bbb;
   color: #fff;
+  padding: 10px 50px;
+  cursor: pointer;
 }
 
 .main-content {

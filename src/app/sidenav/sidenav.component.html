@@ -2,26 +2,26 @@
 <md-sidenav-container class="sidenav-container">
   <md-sidenav #sidenav class="sidenav">
     <ul class="vertical-menu">
-      <li><a href="page1.html" class="menu-heading">Section 1</a></li>
-      <ul class="vertical-menu">
-        <li><a href="page1a.html">page</a></li>
-        <li><a href="page1b.html">page</a></li>
-        <li><a href="page1c.html">page</a></li>
-        <li><a href="page1d.html">page</a></li>
+      <li class="menu-heading" (click)="toggleSection1()">Section 1 <md-icon>keyboard_arrow_right</md-icon></li>
+      <ul class="vertical-menu" *ngIf="section1">
+        <li><a href="page1a.html">section 1 page</a></li>
+        <li><a href="page1b.html">section 1 page</a></li>
+        <li><a href="page1c.html">section 1 page</a></li>
+        <li><a href="page1d.html">section 1 page</a></li>
       </ul>
-      <li><a href="page2.html" class="menu-heading">Section 2</a></li>
-      <ul class="vertical-menu">
-        <li><a href="page2a.html">page</a></li>
-        <li><a href="page2b.html">page</a></li>
-        <li><a href="page2c.html">page</a></li>
-        <li><a href="page2d.html">page</a></li>
+      <li class="menu-heading" (click)="toggleSection2()">Section 2</li>
+      <ul class="vertical-menu" *ngIf="section2">
+        <li><a href="page2a.html">section 2 page</a></li>
+        <li><a href="page2b.html">section 2 page</a></li>
+        <li><a href="page2c.html">section 2 page</a></li>
+        <li><a href="page2d.html">section 2 page</a></li>
       </ul>
-      <li><a href="page3.html" class="menu-heading">Section 3</a></li>
-      <ul class="vertical-menu">
-        <li><a href="page3a.html">page</a></li>
-        <li><a href="page3b.html">page</a></li>
-        <li><a href="page3c.html">page</a></li>
-        <li><a href="page3d.html">page</a></li>
+      <li class="menu-heading" (click)="toggleSection3()">Section 3</li>
+      <ul class="vertical-menu" *ngIf="section3">
+        <li><a href="page3a.html">section 3 page</a></li>
+        <li><a href="page3b.html">section 3 page</a></li>
+        <li><a href="page3c.html">section 3 page</a></li>
+        <li><a href="page3d.html">section 3 page</a></li>
       </ul>
     </ul>
   </md-sidenav>
@@ -29,6 +29,8 @@
     <button md-button (click)="sidenav.open()"><md-icon>menu</md-icon></button>
     <div class="main-content">
       <p>Put content here.</p>
+<div *ngIf="greeting">Hi</div>
+<button (click)="toggleGreeting()">Show/Hide Greeting</button>
     </div>
   </div>
 </md-sidenav-container>
