@@ -3,10 +3,10 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-sidenav',
   templateUrl: './sidenav.component.html',
-  styleUrls: ['./sidenav.component.css']
+  styleUrls: ['./sidenav.component.scss']
 })
 export class SidenavComponent implements OnInit {
-  greeting = true;
+
   section1 = false;
   section2 = false;
   section3 = false;
@@ -23,20 +23,10 @@ export class SidenavComponent implements OnInit {
     this.section3 = !this.section3;
   }
 
-  toggleGreeting() {
-    this.greeting = !this.greeting;
-  }
-
-
-
-
   constructor() { }
 
   ngOnInit() {
   }
-
-
-
 }
 
 

@@ -2,21 +2,29 @@
 <md-sidenav-container class="sidenav-container">
   <md-sidenav #sidenav class="sidenav">
     <ul class="vertical-menu">
-      <li class="menu-heading" (click)="toggleSection1()">Section 1 <md-icon>keyboard_arrow_right</md-icon></li>
+      <li class="menu-heading" (click)="toggleSection1()">Section 1
+        <md-icon *ngIf="!section1">keyboard_arrow_right</md-icon>
+        <md-icon *ngIf="section1">keyboard_arrow_down</md-icon></li>
       <ul class="vertical-menu" *ngIf="section1">
         <li><a href="page1a.html">section 1 page</a></li>
         <li><a href="page1b.html">section 1 page</a></li>
         <li><a href="page1c.html">section 1 page</a></li>
         <li><a href="page1d.html">section 1 page</a></li>
       </ul>
-      <li class="menu-heading" (click)="toggleSection2()">Section 2</li>
+      <li class="menu-heading" (click)="toggleSection2()">Section 2
+        <md-icon *ngIf="!section2">keyboard_arrow_right</md-icon>
+        <md-icon *ngIf="section2">keyboard_arrow_down</md-icon>
+      </li>
       <ul class="vertical-menu" *ngIf="section2">
         <li><a href="page2a.html">section 2 page</a></li>
         <li><a href="page2b.html">section 2 page</a></li>
         <li><a href="page2c.html">section 2 page</a></li>
         <li><a href="page2d.html">section 2 page</a></li>
       </ul>
-      <li class="menu-heading" (click)="toggleSection3()">Section 3</li>
+      <li class="menu-heading" (click)="toggleSection3()">Section 3
+        <md-icon *ngIf="!section3">keyboard_arrow_right</md-icon>
+        <md-icon *ngIf="section3">keyboard_arrow_down</md-icon>
+      </li>
       <ul class="vertical-menu" *ngIf="section3">
         <li><a href="page3a.html">section 3 page</a></li>
         <li><a href="page3b.html">section 3 page</a></li>
@@ -29,8 +37,6 @@
     <button md-button (click)="sidenav.open()"><md-icon>menu</md-icon></button>
     <div class="main-content">
       <p>Put content here.</p>
-<div *ngIf="greeting">Hi</div>
-<button (click)="toggleGreeting()">Show/Hide Greeting</button>
     </div>
   </div>
 </md-sidenav-container>
