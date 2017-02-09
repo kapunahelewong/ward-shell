@@ -1,6 +1,5 @@
-
-<md-sidenav-container class="sidenav-container">
-  <md-sidenav #sidenav class="sidenav">
+<md-sidenav-container class="sidenav-container" (window:resize)="onResize($event.target.innerWidth)">
+  <md-sidenav #sidenav class="sidenav" opened="{{isSideNavOpen}}">
     <ul class="vertical-menu">
       <li class="menu-heading" (click)="toggleSection1()">Section 1
         <md-icon *ngIf="!section1">keyboard_arrow_right</md-icon>
@@ -51,7 +50,7 @@
     </ul>
   </md-sidenav>
   <div class="sidenav-content">
-    <button class="hamburger" md-button (click)="sidenav.open()"><md-icon>menu</md-icon></button>
+    <button *ngIf="isHamburgerVisible" class="hamburger" md-button (click)="sidenav.open()"><md-icon>menu</md-icon></button>
     <div class="main-content">
       <p>Put content here.</p>
     </div>
