@@ -72,7 +72,7 @@ To use these, put this snippet in the approriate selector:
 .vertical-menu {
   li {
     list-style-type: none;
-    border-bottom: 1px #ddd solid;
+    border-bottom: 1px #f1f1f1 solid;
   }
 }
 
@@ -82,8 +82,10 @@ To use these, put this snippet in the approriate selector:
   cursor: pointer;
   text-decoration: none;
   text-align: left;
+  padding-top: 10px;
+  padding-bottom: 10px;
   &:hover {
-    background-color: #ddd;
+    background-color: #f9f9f9;
   }
 }
 
@@ -93,6 +95,7 @@ To use these, put this snippet in the approriate selector:
   padding: 10px;
   cursor: pointer;
   position: relative;
+  min-width: 160px;
   .material-icons {
     position: absolute;
     top: 8px;
