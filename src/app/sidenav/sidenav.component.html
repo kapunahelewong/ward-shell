@@ -6,23 +6,23 @@
         <md-icon *ngIf="section1">keyboard_arrow_down</md-icon>
       </li>
         <ul class="vertical-menu" *ngIf="section1">
-          <li><a href="page1b.html">section 1 page</a></li>
-          <li><a href="page1c.html">section 1 page</a></li>
-          <li><a href="page1d.html">section 1 page</a></li>
-          <li class="menu-heading sub-heading" (click)="toggleSection1b()">level 2 header
+          <li class="sub-level-1"><a href="page1b.html">page</a></li>
+          <li class="sub-level-1"><a href="page1c.html">page</a></li>
+          <li class="sub-level-1"><a href="page1d.html">page</a></li>
+          <li class="menu-heading sub-heading-2" (click)="toggleSection1b()">level 2 header
               <md-icon *ngIf="!section1b">keyboard_arrow_right</md-icon>
               <md-icon *ngIf="section1b">keyboard_arrow_down</md-icon>
           </li>
-            <ul class="vertical-menu sub-heading" *ngIf="section1b">
-              <li><a href="page1a.html">section 1b page</a></li>
-              <li><a href="page1a.html">section 1b page</a></li>
-              <li class="menu-heading sub-heading" (click)="toggleSection1c()">level 3 header
+            <ul class="vertical-menu" *ngIf="section1b">
+              <li class="sub-level-2"><a href="page1a.html">page</a></li>
+              <li class="sub-level-2"><a href="page1a.html">page</a></li>
+              <li class="menu-heading sub-heading-3" (click)="toggleSection1c()">level 3 header
                   <md-icon *ngIf="!section1c">keyboard_arrow_right</md-icon>
                   <md-icon *ngIf="section1c">keyboard_arrow_down</md-icon>
               </li>
-                <ul class="vertical-menu sub-heading" *ngIf="section1c">
-                  <li><a href="page1a.html">section 1c page</a></li>
-                  <li><a href="page1a.html">section 1c page</a></li>
+                <ul class="vertical-menu" *ngIf="section1c">
+                  <li class="sub-level-3"><a href="page1a.html">page</a></li>
+                  <li class="sub-level-3"><a href="page1a.html">page</a></li>
                 </ul>
             </ul>
 
@@ -32,20 +32,20 @@
         <md-icon *ngIf="section2">keyboard_arrow_down</md-icon>
       </li>
         <ul class="vertical-menu" *ngIf="section2">
-          <li><a href="page2a.html">section 2 page</a></li>
-          <li><a href="page2b.html">section 2 page</a></li>
-          <li><a href="page2c.html">section 2 page</a></li>
-          <li><a href="page2d.html">section 2 page</a></li>
+          <li class="sub-level-1"><a href="page2a.html">page</a></li>
+          <li class="sub-level-1"><a href="page2b.html">page</a></li>
+          <li class="sub-level-1"><a href="page2c.html">page</a></li>
+          <li class="sub-level-1"><a href="page2d.html">page</a></li>
         </ul>
       <li class="menu-heading" (click)="toggleSection3()">Section 3
         <md-icon *ngIf="!section3">keyboard_arrow_right</md-icon>
         <md-icon *ngIf="section3">keyboard_arrow_down</md-icon>
       </li>
         <ul class="vertical-menu" *ngIf="section3">
-          <li><a href="page3a.html">section 3 page</a></li>
-          <li><a href="page3b.html">section 3 page</a></li>
-          <li><a href="page3c.html">section 3 page</a></li>
-          <li><a href="page3d.html">section 3 page</a></li>
+          <li class="sub-level-1"><a href="page3a.html">page</a></li>
+          <li class="sub-level-1"><a href="page3b.html">page</a></li>
+          <li class="sub-level-1"><a href="page3c.html">page</a></li>
+          <li class="sub-level-1"><a href="page3d.html">page</a></li>
         </ul>
     </ul>
   </md-sidenav>
