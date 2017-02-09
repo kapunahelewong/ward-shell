@@ -47,6 +47,14 @@ To use these, put this snippet in the approriate selector:
 
 
 /*side nav*/
+
+
+.hamburger {
+    @include bp(tiny) {
+      display: none;
+    }
+}
+
 .sidenav-container {
   width: 100%;
   height: 100vh;
@@ -105,8 +113,6 @@ To use these, put this snippet in the approriate selector:
   padding: 1rem;
 }
 
-.hamburger {
-    @include bp(tiny) {
-      display: none;
-    }
+.sub-heading {
+  padding-left: 60px;
 }
