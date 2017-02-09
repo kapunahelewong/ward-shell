@@ -1,5 +1,5 @@
 <md-sidenav-container class="sidenav-container" (window:resize)="onResize($event.target.innerWidth)">
-  <md-sidenav #sidenav class="sidenav" opened="{{isSideNavOpen}}">
+  <md-sidenav #sidenav class="sidenav" mode="{{onSideBarOpen()}}" opened="{{isSideNavOpen}}">
     <ul class="vertical-menu">
       <li class="menu-heading" (click)="toggleSection1()">Section 1
         <md-icon *ngIf="!section1">keyboard_arrow_right</md-icon>

@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
   animations: []
 })
 export class SidenavComponent implements OnInit {
-
+  public storeWidth: Number = 0;
   public isSideNavOpen: Boolean = false;
   public isHamburgerVisible: Boolean = false;
   public windowWidthToOpenSideNav: Number = 600;
@@ -18,9 +18,15 @@ export class SidenavComponent implements OnInit {
   section2 = false;
   section3 = false;
 
-  onResize(_width) {
+  onResize(_width, sidebar) {
+    this.storeWidth = _width;
     this.isSideNavOpen = _width > this.windowWidthToOpenSideNav;
     this.isHamburgerVisible = _width < this.windowWidthToOpenSideNav;
+    this.onSideBarOpen();
+  }
+
+  public onSideBarOpen(){
+    return this.storeWidth > this.windowWidthToOpenSideNav ? 'side' : 'over';
   }
 
   toggleSection1() {
@@ -43,8 +49,7 @@ export class SidenavComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    console.log(window.innerWidth);
-    this.onResize(window.innerWidth);
+    this.onResize(window.innerWidth, {});
   }
 }
 
