@@ -51,7 +51,7 @@ To use these, put this snippet in the approriate selector:
 
 .hamburger {
     @include bp(tiny) {
-      display: none;
+      // display: none;
     }
 }
 
@@ -95,8 +95,8 @@ To use these, put this snippet in the approriate selector:
 }
 
 .menu-heading {
-  background-color: #bbb;
-  color: #fff;
+  background-color: #efefef;
+  color: #444;
   padding: 10px 50px;
   cursor: pointer;
   position: relative;
